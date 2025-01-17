@@ -1,0 +1,69 @@
+.about {
+  display: grid;
+  place-items: center;
+  padding-top: 6.4rem;
+  background-image: linear-gradient(
+      to right,
+      rgba($light-color, 0.9),
+      rgba($background-color, 0.9)
+    ),
+    url("../img/hospital-logo.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+
+  &__icon {
+    font-size: 30rem;
+    color: #7dd4fcaa;
+    margin-bottom: 1.8rem;
+    position: absolute;
+    opacity: 0.6;
+  }
+
+  .bottom {
+    bottom: -5rem;
+    left: -5rem;
+    transform: rotate(-45deg);
+  }
+
+  .top {
+    top: 0;
+    right: -5rem;
+    font-size: 20.5rem;
+    rotate: 45deg;
+  }
+  &__container {
+    @include sections;
+    display: grid;
+    place-items: center;
+  }
+
+  &__heading {
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 1.2;
+    color: #333;
+    margin-bottom: 1.8rem;
+
+    @include respond(phone3) {
+      font-size: 3.2rem;
+      text-align: center;
+    }
+  }
+
+  &__text {
+    font-size: 2.2rem;
+    color: $text-color-2;
+    text-align: center;
+    width: 70%;
+    line-height: 1.7;
+    margin-bottom: 1.8rem;
+
+    @include respond(phone2) {
+      width: 100%;
+      font-size: 2.1rem;
+    }
+  }
+}

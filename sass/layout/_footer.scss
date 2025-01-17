@@ -1,0 +1,85 @@
+.footer {
+  background-color: $primary-color;
+  &__container {
+    @include sections;
+    padding: 5rem 2rem;
+  }
+
+  .contact__container {
+    padding: 0;
+  }
+
+  &__img-box {
+    width: 20rem;
+    margin: 0 auto;
+    margin-bottom: 4rem;
+
+    // height: 5rem;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+    list-style: none;
+  }
+
+  &__link {
+    font-weight: 600;
+    font-size: 2.4rem;
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    transition: border 0.5s;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -0.5rem;
+      left: 0;
+      background-color: $sky-blue;
+      height: 2px;
+      width: 0;
+      transition: all 0.5s ease;
+      transform-origin: left;
+      width: 100%;
+      transform: scaleX(0);
+    }
+    &:hover,
+    &:hover::after,
+    &:active {
+      color: $sky-blue;
+      transform: scaleX(1);
+    }
+  }
+
+  &__box {
+    color: #fff;
+
+    h2 {
+      color: $info-color;
+    }
+
+    a {
+      color: inherit !important;
+      text-decoration: none;
+      display: block;
+      margin-bottom: 1.6rem;
+    }
+  }
+
+  &__copy {
+    font-size: 1.4rem;
+    color: #fff;
+    margin-top: 2rem;
+  }
+}

@@ -1,0 +1,101 @@
+.testimonials {
+  &__container {
+    @include sections;
+    background-color: aliceblue;
+    padding-top: 10rem;
+    padding-bottom: 5rem;
+  }
+
+  .box__container {
+    position: relative;
+    height: 55.5rem;
+    overflow: hidden;
+
+    @include respond(phone2) {
+      height: 43.5rem;
+    }
+  }
+
+  &__heading {
+    font-size: 4.8rem;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .slide {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    height: 100%;
+
+    transition: all 0.5s ease-in;
+  }
+
+  &__box {
+    background-color: #38bdf8;
+    display: flex;
+    gap: 4rem;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 4rem;
+    box-shadow: 0 0.5rem 1rem rgba($dark-color, 0.1);
+    color: darken($info-color, 30%);
+    width: 60%;
+    height: 50rem;
+    margin: 0 auto;
+
+    @include respond(phone3) {
+      height: 40rem;
+    }
+
+    @include respond(phone2) {
+      padding: 2rem;
+      width: 80%;
+    }
+  }
+
+  &__text {
+    font-size: 2.4rem;
+    line-height: 1.8;
+    text-align: center;
+    position: relative;
+  }
+
+  &__name {
+    font-size: 2.4rem;
+    font-weight: 600;
+    color: $primary-color;
+  }
+
+  &__dots {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+    height: 3rem;
+
+    span {
+      width: 1rem;
+      height: 1rem;
+      border-radius: 50%;
+      background-color: #7dd4fc73;
+      cursor: pointer;
+      transition: all 0.3s;
+      &:hover {
+        background-color: darken(#38bdf8, 10%) !important;
+        border: 1px solid darken(#38bdf8, 30%);
+      }
+    }
+  }
+
+  .quotes {
+    font-size: 10rem;
+    color: rgba($primary-color, 0.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+  }
+}

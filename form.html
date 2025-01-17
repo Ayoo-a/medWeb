@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form family hospital</title>
+    <link
+      rel="shortcut icon"
+      href="img/hospital-logo.jpg"
+      type="image/x-icon"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="nav__wrapper">
+        <nav class="nav">
+          <a href="index.html" class="nav__logo-box">
+            <img
+              src="img/hospital-logo.jpg"
+              alt="adelere family hospital logo"
+              class="nav__logo"
+            />
+          </a>
+
+          <div class="mobile-nav__wrapper">
+            <input type="checkbox" class="mobile-nav__input" id="button" />
+            <label for="button" class="mobile-nav__button button">
+              <span class="button__icon mobile-nav__icon">&nbsp;</span>
+            </label>
+
+            <nav class="mobile-nav__nav">
+              <ul class="mobile-nav__list">
+                <li class="nav__item mobile-nav__item">
+                  <a href="index.html" class="active nav__link mobile-nav__link"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav__item mobile-nav__item">
+                  <a href="about.html" class="nav__link mobile-nav__link"
+                    >About</a
+                  >
+                </li>
+                <li class="nav__item mobile-nav__item">
+                  <a href="contact.html" class="nav__link mobile-nav__link"
+                    >Contact</a
+                  >
+                </li>
+                <li class="nav__item mobile-nav__item">
+                  <a href="login.html" class="nav__link mobile-nav__link"
+                    >Log-in</a
+                  >
+                </li>
+                <li class="nav__item mobile-nav__item" role="button">
+                  <a href="tel:+234 807 0837 745" class="btn mobile-nav__link"
+                    >Book Appointment
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="index.html" class="nav__link">Home</a>
+            </li>
+            <li class="nav__item">
+              <a href="about.html" class="nav__link">About</a>
+            </li>
+            <li class="nav__item">
+              <a href="contact.html" class="nav__link">Contact</a>
+            </li>
+            <li class="nav__item">
+              <a href="login.html" class="nav__link">Log-in</a>
+            </li>
+            <li class="nav__item" role="button">
+              <a href="tel:+234 807 0837 745" class="btn">Book Appointment</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section class="form">
+      <section class="form__container">
+        <i class="ph ph-heartbeat about__icon top form__icon"></i>
+        <h1 class="heading-2 form__heading">
+          Book an Appointment with us Today
+        </h1>
+        <form class="form__form" action="#">
+          <div class="form__group">
+            <label class="form__label" for="firstName">First name</label>
+            <input
+              id="firstName"
+              class="form__input"
+              type="text"
+              minlength="2"
+              placeholder="First name"
+              required
+            />
+          </div>
+
+          <div class="form__group">
+            <label class="form__label" for="firstName">Last Name</label>
+            <input
+              id="LastName"
+              class="form__input"
+              type="text"
+              minlength="2"
+              placeholder="last name"
+              required
+            />
+          </div>
+
+          <div class="form__group">
+            <label class="form__label" for="firstName">Email</label>
+            <input
+              id="email"
+              class="form__input"
+              type="email"
+              placeholder="me@email.com"
+              required
+            />
+          </div>
+
+          <div class="form__group">
+            <label class="form__label" for="password">Password</label>
+            <input
+              id="password"
+              class="form__input"
+              type="password"
+              minlength="4"
+              placeholder="Password"
+              required
+            />
+          </div>
+
+          <div class="form__group">
+            <label class="form__label" for="firstName">Phone</label>
+            <input
+              id="Phone"
+              class="form__input"
+              type="tel"
+              placeholder="0806......."
+              required
+            />
+          </div>
+          <button type="submit" class="btn form__btn">Book Appointment</button>
+        </form>
+      </section>
+    </section>
+
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__box">
+          <figure class="footer__img-box">
+            <img
+              src="img/hospital-logo.jpg"
+              alt="adelere family hospital logo"
+              class="footer__logo"
+            />
+          </figure>
+        </div>
+
+        <ul class="footer__list">
+          <li class="footer__item">
+            <a href="#" class="footer__link">Home</a>
+          </li>
+          <li class="footer__item">
+            <a href="about.html" class="footer__link">About</a>
+          </li>
+          <li class="footer__item">
+            <a href="#" class="footer__link">Contact</a>
+          </li>
+          <li class="footer__item">
+            <a href="login.html" class="footer__link">Log-in</a>
+          </li>
+        </ul>
+
+        <article class="contact__container">
+          <div class="contact__box footer__box">
+            <h2 class="heading-2 content__heading">
+              <span><i class="ph ph-clock"></i></span>
+              <span> Opening Hours</span>
+            </h2>
+            <p class="contact__text">
+              <span class="contact__day">Monday - Sunday </span>24 hours
+            </p>
+          </div>
+
+          <div class="contact__box footer__box">
+            <h2 class="heading-2 content__heading">
+              <span><i class="ph ph-map-pin-area"></i></span>
+              <span>Hospital Address</span>
+            </h2>
+            <p class="contact__text">
+              Dr. Adelere S.A. House, Behind mobile filling station, Ayerokun,
+              Moniya, ibadan, Oyo state.
+            </p>
+          </div>
+
+          <div class="contact__box footer__box">
+            <h2 class="heading-2 content__heading">
+              <span><i class="ph ph-user-gear"></i></span>
+              <span> Help Desk</span>
+            </h2>
+
+            <a href="tel:+234 807 0837 745" class="footer__text"
+              ><i class="ph ph-phone"></i> <span>+234 807 0837 745</span>
+            </a>
+
+            <a href="tel:+234 803 4219 74" class="footer__text">
+              <i class="ph ph-phone"></i> <span>+234 803 4219 744 </span>
+            </a>
+          </div>
+        </article>
+      </div>
+      <div class="footer__copy">
+        <p>&copy;Adelere Family Hospital. build by icecodewithcream.</p>
+      </div>
+    </footer>
+  </body>
+</html>

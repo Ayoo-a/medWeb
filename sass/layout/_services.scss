@@ -1,0 +1,65 @@
+.services {
+  &__container {
+    // @include sections;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    @include respond(phone3) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__box {
+    display: grid;
+    gap: 1.2rem;
+    box-shadow: 0 0.5rem 1rem rgba($dark-color, 0.1);
+    color: darken($info-color, 30%);
+    width: 100% !important;
+    padding: 10rem 7rem;
+
+    @include respond(phone2) {
+      padding: 4rem 3rem;
+    }
+
+    &:nth-child(1) {
+      background-color: #38bdf8;
+      border-top-left-radius: 1rem;
+    }
+    &:nth-child(2) {
+      background-color: #0284c7;
+      border-top-right-radius: 1rem;
+    }
+    &:nth-child(3) {
+      background-color: #0284c7;
+      border-bottom-left-radius: 1rem;
+
+      @include respond(phone3) {
+        background-color: #38bdf8;
+      }
+    }
+
+    &:nth-child(4) {
+      background-color: #38bdf8;
+      border-bottom-right-radius: 1rem;
+
+      @include respond(phone3) {
+        background-color: #0284c7;
+      }
+    }
+  }
+
+  &__heading {
+    font-size: 2.24rem;
+    line-height: 2.24rem;
+  }
+
+  &__icon {
+    font-size: 4rem;
+    color: $primary-color;
+  }
+
+  &__text {
+    font-size: 2.4rem;
+    line-height: 2;
+  }
+}

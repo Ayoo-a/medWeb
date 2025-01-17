@@ -1,0 +1,41 @@
+.button {
+  display: none;
+
+  @include respond(phone2) {
+    display: block;
+    margin-right: 3rem;
+    align-self: center;
+  }
+
+  &__icon {
+    position: relative;
+    text-align: center;
+  }
+
+  &__icon,
+  &::after,
+  &::before {
+    width: 4rem;
+    height: 4px;
+    border-radius: 3px;
+    background-color: $primary-color;
+    display: inline-block;
+    margin-top: 2.5rem;
+    transform: translateX(50%);
+    transition: all 0.5s;
+  }
+
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+  }
+
+  &::after {
+    top: 1rem;
+  }
+  &::before {
+    top: -1rem;
+  }
+}

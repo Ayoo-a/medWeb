@@ -1,0 +1,90 @@
+.header {
+  max-width: 160rem;
+  margin-inline: auto;
+
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    position: fixed;
+    width: 100%;
+    max-width: 160rem;
+    background: #fff;
+
+    &__wrapper {
+      height: 15rem;
+      position: relative;
+      // max-width: 160rem;
+      width: 100%;
+      z-index: 100;
+    }
+
+    &__logo-box {
+      width: 20rem;
+      height: 11rem;
+    }
+
+    &__logo {
+      object-fit: cover;
+      width: 100%;
+    }
+
+    &__list {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      list-style: none;
+
+      @include respond(phone2) {
+        display: none;
+      }
+    }
+
+    &__item {
+      padding-inline: 2rem;
+      a {
+        font-size: 2.2rem !important;
+      }
+
+      .nav__link {
+        & {
+          font-weight: 600;
+          text-decoration: none;
+          color: $text-color-2;
+          display: block;
+          transition: border 0.5s;
+          position: relative;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: -0.5rem;
+          left: 0;
+          background-color: $sky-blue;
+          height: 2px;
+          width: 0;
+          transition: all 0.5s ease;
+          transform-origin: left;
+          width: 100%;
+          transform: scaleX(0);
+
+          @include respond(phone2) {
+            background-color: #fff !important;
+          }
+        }
+        &:hover,
+        &:hover::after,
+        &:active {
+          color: $sky-blue;
+          transform: scaleX(1);
+
+          @include respond(phone2) {
+            color: #fff !important;
+          }
+        }
+      }
+    }
+  }
+}

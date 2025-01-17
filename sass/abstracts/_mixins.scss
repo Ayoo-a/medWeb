@@ -1,0 +1,56 @@
+@mixin sections {
+  max-width: 160rem;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  padding-bottom: 10rem;
+}
+//Media query manager
+
+// phone-width === 780
+// tap-2 === 920
+// tap === 1200
+// laptop === 1850
+
+$phone: 49.375em;
+$phone2: 41.625em;
+$phone3: 34.375em;
+$tab: 75em;
+$tab2: 57.5em;
+$laptop: 109.375em;
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media (max-width: $phone) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == phone2 {
+    @media (max-width: $phone2) {
+      @content;
+    }
+  }
+  @if $breakpoint == phone3 {
+    @media (max-width: $phone3) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tap {
+    @media (max-width: $tab) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tap2 {
+    @media (max-width: $tab2) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == laptop {
+    @media (min-width: $laptop) {
+      @content;
+    }
+  }
+}

@@ -1,0 +1,69 @@
+.mobile-nav {
+  &__wrapper {
+    position: relative;
+  }
+
+  &__button {
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+    display: block;
+    cursor: pointer;
+  }
+
+  &__nav {
+  }
+
+  &__nav {
+    list-style: none;
+    padding: 2rem 2.5rem;
+    display: grid;
+    place-items: center;
+    position: absolute;
+    top: 6rem;
+    right: 0;
+    background-color: #0284c7;
+    width: max-content;
+    border-radius: 3rem;
+
+    transform: translateY(10rem);
+    transition: all 0.5s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  &__input {
+    display: none;
+    &:checked ~ nav {
+      transform: translateY(0);
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &__item {
+    margin-bottom: 2.5rem;
+    list-style: none;
+  }
+  &__link {
+    display: inline-block !important;
+    &:hover,
+    &::after {
+      color: #fff !important;
+    }
+  }
+
+  &__input:checked + &__button span {
+    background-color: transparent;
+  }
+
+  &__input:checked + &__button::after {
+    top: 0;
+    transform: translate(50%) rotate(-135deg);
+  }
+
+  &__input:checked + &__button::before {
+    top: 0;
+    transform: translateX(50%) rotate(135deg);
+  }
+}

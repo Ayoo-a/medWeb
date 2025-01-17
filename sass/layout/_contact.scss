@@ -1,0 +1,94 @@
+.contact {
+  &__container {
+    @include sections;
+    display: flex;
+    justify-content: center;
+
+    @include respond(phone3) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__heading {
+    text-align: center;
+  }
+
+  &__day {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    margin-top: 2rem;
+    list-style: none;
+  }
+
+  &__box {
+    padding: 4rem 6rem;
+    font-size: 1.8rem;
+    flex: 1;
+    color: lighten($primary-color, 10%);
+
+    @include respond(phone3) {
+      flex: 1 1 100%;
+    }
+
+    @include respond(phone2) {
+      padding: 2rem 4rem;
+    }
+    @include respond(phone2) {
+      padding: 2rem 4rem;
+    }
+
+    h2 {
+      font-size: 2.6rem;
+      font-weight: 600;
+      line-height: 1.2;
+      color: $primary-color;
+      margin-bottom: 2rem;
+      display: flex;
+      gap: 1rem;
+
+      @include respond(phone2) {
+        font-size: 2.2rem;
+      }
+    }
+
+    p {
+      margin-bottom: 1.5rem;
+      margin-left: 1rem;
+      font-size: 2.2rem;
+      line-height: 1.8;
+
+      @include respond(phone2) {
+        font-size: 1.4rem;
+      }
+    }
+  }
+
+  &__openHour {
+    background-color: #7dd3fc;
+  }
+
+  &__phone {
+    background-color: #38bdf8;
+
+    a {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      margin-top: 2rem;
+      margin-left: 2rem;
+      font-size: 2rem;
+
+      @include respond(phone2) {
+        font-size: 1.4rem;
+      }
+    }
+  }
+
+  &__location {
+    background-color: #0284c7;
+    p {
+      line-height: 1.8;
+    }
+  }
+}
